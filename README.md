@@ -1,2 +1,3 @@
 # Javascript_Tests
-Learning the basics of Js.
+
+Learning the basics of JS.
