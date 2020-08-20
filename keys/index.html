@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="script.js" defer></script>
+    <style>
+        html {
+            font: 12pt sans-serif;
+            background: rgb(20, 19, 19);
+            color: #d5d5d5;
+        }
+
+        .digit {
+            width: 48px;
+            height: 48px;
+            line-height: 48px;
+            font-size: 9pt;
+            font-weight: bold;
+            text-align: center;
+            text-shadow:
+                        -1px -1px 10px white,
+                        -1px -1px 10px white,
+                        0px 0px 10px white,
+                        0px 0px 10px white,
+                        1px 1px 10px white,
+                        1px 1px 10px white;
+            border: 1px solid cyan;
+            border-radius: 50%;
+            background: white;
+            color: black;
+        }
+    </style>
+</head>
+<body onkeyup="generateDigit(event)">
+    <h1>Teste seu Teclado</h1>
+
+    <div class="area_digitos" style="width: 100%; height: 500px;"></div>
+</body>
+</html>
