@@ -1,0 +1,81 @@
+* {
+    margin: 0;
+    padding: 0;
+    background: none;
+    border: none;
+    box-sizing: border-box;
+}
+
+html {
+    font: 12pt 'Open Sans', sans-serif;
+    background: rgb(233, 224, 224);
+}
+
+a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: white;
+}
+
+ul {
+    list-style: none;
+}
+
+header {
+    display: flex;
+    padding: 1em;
+    background: brown;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-family: 'Do Hyeon', sans-serif;
+    font-size: 1.5em;
+}
+
+.btn-menu {
+    min-width: 42px;
+    min-height: 42px;
+    font-size: 1.2rem;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s;
+    outline: none;
+}
+.btn-menu:active {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    background-color: rgba(0, 0, 0, 0.1);
+    transition: 0.1s;
+}
+
+.btn-menu span {
+    color: salmon;
+}
+
+.menu {
+    display: block;
+    width: 0;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: 0;
+    background: white;
+    box-shadow: 0px 2px 6px #444;
+    transition: all ease 0.45s;
+}
+
+.menu a {
+    display: block;
+    padding: 1em;
+    color: #333;
+    transition: background 0.15s;
+}
+.menu a:hover {
+    background-color:  rgba(0, 0, 0, 0.1);
+    transition: background 0.25s;
+}
+
+main {
+    padding: 1em;
+}
