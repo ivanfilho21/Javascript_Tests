@@ -36,6 +36,16 @@
 <body onkeyup="generateDigit(event)">
     <h1>Teste seu Teclado</h1>
 
+    <label>Contador de Toques</label>
+    <select id="opcoes" oninput="toggleContador()">
+        <option value="0">Mostrar</option>
+        <option value="1">Esconder</option>
+    </select>
+
+    <div class="contador" style="display: block;">
+        <span class="valor">0</span>
+    </div>
+
     <div class="area_digitos" style="width: 100%; height: 500px;"></div>
 </body>
 </html>
