@@ -1,3 +1,12 @@
+var contador = 0;
+
+function toggleContador() {
+    let elem = document.querySelector('.contador'); 
+    let display = elem.style.display;
+    display = display != 'block' ? 'block' : 'none';
+    elem.style.display = display;
+}
+
 function generateDigit(e) {
     const digitSize = 48;
 
@@ -32,6 +41,8 @@ function generateDigit(e) {
 
     console.log(e);
     parent.appendChild(digit);
+
+    document.querySelector('.contador').querySelector('.valor').innerHTML = ++contador;
 }
 
 function generateRandomColor() {
