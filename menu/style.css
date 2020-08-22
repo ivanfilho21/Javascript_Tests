@@ -69,11 +69,11 @@ header {
     display: block;
     padding: 1em;
     color: #333;
-    transition: background 0.15s;
+    transition: 0.15s;
 }
 .menu a:hover {
     background-color:  rgba(0, 0, 0, 0.1);
-    transition: background 0.25s;
+    transition: 0.25s;
 }
 
 main {
