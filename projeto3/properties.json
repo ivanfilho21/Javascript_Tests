@@ -46,7 +46,7 @@
         "0": {"id": 15, "name": "Kentucky Avenue", "price": 220},
         "1": {"id": 16, "name": "Indiana Avenue", "price": 220},
         "2": {"id": 17, "name": "Illinois Avenue", "price": 240},
-        "color": "crimson"
+        "color": "red"
     },
     "7": {
         "properties": 3,
@@ -66,6 +66,6 @@
         "properties": 2,
         "0": {"id": 27, "name": "Park Place", "price": 350},
         "1": {"id": 28, "name": "Boardwalk", "price": 400},
-        "color": "indigo"
+        "color": "dodgerblue"
     }
 }
