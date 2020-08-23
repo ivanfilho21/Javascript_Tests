@@ -17,6 +17,12 @@
             <option value="2">Name</option>
             <option value="3">Price</option>
         </select>
+
+        <label>Mode:</label>
+        <select oninput="sort(0, this.selectedIndex)">
+            <option value="0">Descending</option>
+            <option value="1" selected>Ascending</option>
+        </select>
     </div>
 
     <div class="filters">
@@ -26,9 +32,10 @@
     <table id="table_properties">
         <thead>
             <tr>
-                <th>ID</th>
-                <th>Name</th>
-                <th>Price</th>
+                <th onclick="sort(0)">Group</th>
+                <th onclick="sort(1)">ID</th>
+                <th onclick="sort(2)">Name</th>
+                <th onclick="sort(3)">Price</th>
             </tr>
         </thead>
         <tbody></tbody>

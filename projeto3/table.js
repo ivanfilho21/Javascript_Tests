@@ -1,19 +1,28 @@
 const props = [];
 readTextFile('properties.json', buildTable);
 
-function sort(option) {
+function sortDin(key, a, b, asc = true, string = false) {
+    if (string) {
+        return asc ? a[key].localeCompare(b[key]) : b[key].localeCompare(a[key]);
+    }
+    return asc ? (a[key] - b[key]) : (b[key] - a[key]);
+}
+
+function sort(option, asc = true) {
     let array = props.slice();
+
     switch (option) {
         case 0:
+            array = asc ? array : array.slice().reverse();
             break;
         case 1:
-            array = array.slice().sort(function (a, b) { return a['id'] - b['id']; });
+            array = array.slice().sort(function (a, b) { return sortDin('id', a, b, asc); });
             break;
         case 2:
-            array = array.slice().sort(function (a, b) { return a['name'].localeCompare(b['name']); });
+            array = array.slice().sort(function (a, b) { return sortDin('name', a, b, asc, true); });
             break;
         case 3:
-            array = array.slice().sort(function (a, b) { return a['price'] - b['price']; } );
+            array = array.slice().sort(function (a, b) { return sortDin('price', a, b, asc); } );
             break;
     }
 
@@ -64,7 +73,8 @@ function updateTable(array) {
         // tr.style.backgroundColor = p['color'];
         // tr.style.color = p['color'] == 'white' || p['color'] == 'lightblue' || p['color'] == 'yellow' || p['color'] == 'darkorange' ? 'black' : 'white';
         tr.innerHTML = '' +
-        '<td style="background-color: ' + p['color'] + '">' + p['id'] + '</td>' +
+        '<td style="background-color: ' + p['color'] + '"></td>' +
+        '<td>' + p['id'] + '</td>' +
         '<td>' + p['name'] + '</td>' +
         '<td>' + p['price'] + '</td>';
         
