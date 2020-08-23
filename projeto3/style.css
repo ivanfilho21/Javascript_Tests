@@ -11,3 +11,7 @@ th, td {
     border-right: 1px solid #111;
     border-bottom: 1px solid #111;
 }
+
+th {
+    cursor: pointer;
+}
