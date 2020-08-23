@@ -1,0 +1,71 @@
+{
+    "size": 10,
+    "0": {
+        "properties": 2,
+        "0": {"id": 1, "name": "Mediterranean Avenue", "price": 60},
+        "1": {"id": 2, "name": "Baltic Avenue", "price": 60},
+        "color": "brown"
+    },
+    "1": {
+        "properties": 4,
+        "0": {"id": 3, "name": "Reading Railroad", "price": 200},
+        "1": {"id": 11, "name": "Pennsylvania Railroad", "price": 200},
+        "2": {"id": 18, "name": "B. & O. Railroad", "price": 200},
+        "3": {"id": 26, "name": "Short Line Railroad", "price": 200},
+        "color": "white"
+    },
+    "2": {
+        "properties": 3,
+        "0": {"id": 4, "name": "Oriental Avenue", "price": 100},
+        "1": {"id": 5, "name": "Vermont Avenue", "price": 100},
+        "2": {"id": 6, "name": "Connecticut Avenue", "price": 120},
+        "color": "lightblue"
+    },
+    "3": {
+        "properties": 3,
+        "0": {"id": 7, "name": "St. Charlie Place", "price": 140},
+        "1": {"id": 9, "name": "State Avenue", "price": 140},
+        "2": {"id": 10, "name": "Virginia Avenue", "price": 160},
+        "color": "deeppink"
+    },
+    "4": {
+        "properties": 2,
+        "0": {"id": 8, "name": "Electric Company", "price": 150},
+        "1": {"id": 21, "name": "Water Works", "price": 150},
+        "color": "white"
+    },
+    "5": {
+        "properties": 3,
+        "0": {"id": 12, "name": "St. James Place", "price": 180},
+        "1": {"id": 13, "name": "Tennessee Avenue", "price": 180},
+        "2": {"id": 14, "name": "New York Avenue", "price": 200},
+        "color": "darkorange"
+    },
+    "6": {
+        "properties": 3,
+        "0": {"id": 15, "name": "Kentucky Avenue", "price": 220},
+        "1": {"id": 16, "name": "Indiana Avenue", "price": 220},
+        "2": {"id": 17, "name": "Illinois Avenue", "price": 240},
+        "color": "crimson"
+    },
+    "7": {
+        "properties": 3,
+        "0": {"id": 19, "name": "Atlantic Avenue", "price": 260},
+        "1": {"id": 20, "name": "Ventnor Avenue", "price": 260},
+        "2": {"id": 22, "name": "Marvin Gardens", "price": 280},
+        "color": "yellow"
+    },
+    "8": {
+        "properties": 3,
+        "0": {"id": 23, "name": "Pacific Avenue", "price": 300},
+        "1": {"id": 24, "name": "North Carolina Avenue", "price": 300},
+        "2": {"id": 25, "name": "Pennsylvania Avenue", "price": 320},
+        "color": "green"
+    },
+    "9": {
+        "properties": 2,
+        "0": {"id": 27, "name": "Park Place", "price": 350},
+        "1": {"id": 28, "name": "Boardwalk", "price": 400},
+        "color": "indigo"
+    }
+}
