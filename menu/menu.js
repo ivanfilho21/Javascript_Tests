@@ -1,8 +1,8 @@
 const menu = document.querySelector('.menu');
+
 menu.style.top = document.querySelector('header').offsetHeight + 'px';
 
-function toggleMenu() {
-    menu.style.width = menu.style.width != '200px' ? '200px' : '0';
+document.querySelector('.btn-menu').onclick = () => {
+    let width = menu.offsetWidth == 0 ? 200 : 0;
+    menu.style.width = width + 'px';
 }
-
-document.querySelector('.btn-menu').onclick = toggleMenu;
