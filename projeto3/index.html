@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Monopoly Properties</title>
-    <script src="table.js"></script>
+    <script src="table.js" defer></script>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -11,7 +11,7 @@
 
     <div>
         <label>Order by:</label>
-        <select oninput="sort(this.selectedIndex)">
+        <select class="select_order" oninput="order()">
             <option value="0">Group</option>
             <option value="1">ID</option>
             <option value="2">Name</option>
@@ -19,7 +19,7 @@
         </select>
 
         <label>Mode:</label>
-        <select oninput="sort(0, this.selectedIndex)">
+        <select class="select_order_mode" oninput="order()">
             <option value="0">Descending</option>
             <option value="1" selected>Ascending</option>
         </select>
@@ -32,10 +32,10 @@
     <table id="table_properties">
         <thead>
             <tr>
-                <th onclick="sort(0)">Group</th>
-                <th onclick="sort(1)">ID</th>
-                <th onclick="sort(2)">Name</th>
-                <th onclick="sort(3)">Price</th>
+                <th>Group</th>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Price</th>
             </tr>
         </thead>
         <tbody></tbody>

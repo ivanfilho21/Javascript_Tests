@@ -1,28 +1,37 @@
+const selectOrder = document.querySelector('.select_order');
+const selectOrderMode = document.querySelector('.select_order_mode');
 const props = [];
+
 readTextFile('properties.json', buildTable);
 
 function sortDin(key, a, b, asc = true, string = false) {
+    console.log('mode: ', mode);
     if (string) {
         return asc ? a[key].localeCompare(b[key]) : b[key].localeCompare(a[key]);
     }
     return asc ? (a[key] - b[key]) : (b[key] - a[key]);
 }
 
-function sort(option, asc = true) {
+function order() {
     let array = props.slice();
+    let option = selectOrder.selectedIndex;
+    let mode = selectOrderMode.selectedIndex;
+
+    console.log('option: ', option, ' ', typeof(option));
+    console.log('mode: ', mode);
 
     switch (option) {
         case 0:
-            array = asc ? array : array.slice().reverse();
+            array = mode == 1 ? array : array.slice().reverse();
             break;
         case 1:
-            array = array.slice().sort(function (a, b) { return sortDin('id', a, b, asc); });
+            array = array.slice().sort((a, b) => sortDin('id', a, b, mode));
             break;
         case 2:
-            array = array.slice().sort(function (a, b) { return sortDin('name', a, b, asc, true); });
+            array = array.slice().sort((a, b) => sortDin('name', a, b, mode, true));
             break;
         case 3:
-            array = array.slice().sort(function (a, b) { return sortDin('price', a, b, asc); } );
+            array = array.slice().sort((a, b) => sortDin('price', a, b, mode));
             break;
     }
 
@@ -34,9 +43,7 @@ function filterByName(text) {
 
     let array = props.slice();
 
-    array = array.filter(function (t) {
-        return t['name'].toLowerCase().indexOf(text.toLowerCase()) != -1;
-    });
+    array = array.filter((t) => t['name'].toLowerCase().indexOf(text.toLowerCase()) != -1);
     updateTable(array);
 }
 
@@ -55,10 +62,7 @@ function buildTable(json) {
         }
     }
 
-    // props.sort(function (a, b) { return a['id'] - b['id'] });
-    // console.log(props);
-
-    updateTable(props);
+    order();
 }
 
 function updateTable(array) {
