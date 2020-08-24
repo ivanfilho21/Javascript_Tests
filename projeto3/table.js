@@ -63,11 +63,11 @@ function updateTable(array) {
         let p = array[i];
 
         let tr = document.createElement('tr');
-        tr.innerHTML = '' +
-        '<td style="background-color: ' + p['color'] + '"></td>' +
-        '<td>' + p['id'] + '</td>' +
-        '<td>' + p['name'] + '</td>' +
-        '<td>' + p['price'] + '</td>';
+        tr.innerHTML = ''
+                .concat('<td style="background-color: ').concat(p['color']).concat('"></td>')
+                .concat('<td>').concat(p['id']).concat('</td>')
+                .concat('<td>').concat(p['name']).concat('</td>')
+                .concat('<td>').concat(p['price']).concat('</td>');
         
         tbody.appendChild(tr);
     }
