@@ -1,0 +1,54 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: monospace;
+    width: 40%;
+    margin: 0 auto;
+}
+
+h2 {
+    margin-top: 1rem;
+    text-align: center;
+}
+
+.result {
+    font-size: 16pt;
+    margin: 1rem 0;
+    border: 2px solid coral;
+    background-color: whitesmoke;
+}
+
+.result span {
+    display: inline-block;
+    padding: 0.5rem;
+}
+
+.result .key {
+    width: 25%;
+    padding-right: 0.5rem;
+    text-align: right;
+    background-color: white;
+}
+
+.result .value {
+    width: 70%;
+    text-align: center;
+}
+
+input, select {
+    padding: 0.5rem;
+    font-size: 14pt;
+    text-align: center;
+}
+input {
+    max-width: 31.5%;
+}
+
+button {
+    padding: 0.5rem 1rem;
+    font-size: 14pt;
+}
