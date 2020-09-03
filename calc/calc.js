@@ -39,10 +39,10 @@ function updateLifePoints(btn, firstPlayer = false) {
 
     switch (op) {
         case 'sum':
-            lp += value;
+            lp = (lp + value >= 99999) ? 99999 : lp + value;
             break;
         case 'subtract':
-            lp -= value;
+            lp = (lp - value <= 0) ? 0 : lp - value;
             break;
     }
     res.innerHTML = lp;
