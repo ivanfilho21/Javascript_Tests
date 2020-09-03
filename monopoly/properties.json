@@ -4,14 +4,14 @@
         "properties": 2,
         "0": {"id": 1, "name": "Mediterranean Avenue", "price": 60},
         "1": {"id": 2, "name": "Baltic Avenue", "price": 60},
-        "color": "brown"
+        "color": "indigo"
     },
     "1": {
         "properties": 4,
-        "0": {"id": 3, "name": "Reading Railroad", "price": 200},
-        "1": {"id": 11, "name": "Pennsylvania Railroad", "price": 200},
-        "2": {"id": 18, "name": "B. & O. Railroad", "price": 200},
-        "3": {"id": 26, "name": "Short Line Railroad", "price": 200},
+        "0": {"id": 3, "name": "Reading Railroad", "price": 200, "image": "https://vignette.wikia.nocookie.net/the-monopoly/images/4/4b/Railroad.jpg/revision/latest?cb=20130414202126"},
+        "1": {"id": 11, "name": "Pennsylvania Railroad", "price": 200, "image": "https://vignette.wikia.nocookie.net/the-monopoly/images/4/4b/Railroad.jpg/revision/latest?cb=20130414202126"},
+        "2": {"id": 18, "name": "B. & O. Railroad", "price": 200, "image": "https://vignette.wikia.nocookie.net/the-monopoly/images/4/4b/Railroad.jpg/revision/latest?cb=20130414202126"},
+        "3": {"id": 26, "name": "Short Line Railroad", "price": 200, "image": "https://vignette.wikia.nocookie.net/the-monopoly/images/4/4b/Railroad.jpg/revision/latest?cb=20130414202126"},
         "color": "white"
     },
     "2": {
@@ -30,8 +30,8 @@
     },
     "4": {
         "properties": 2,
-        "0": {"id": 8, "name": "Electric Company", "price": 150},
-        "1": {"id": 21, "name": "Water Works", "price": 150},
+        "0": {"id": 8, "name": "Electric Company", "price": 150, "image": "https://thumbs.dreamstime.com/b/monopoly-electric-company-bulb-iconic-game-logo-if-you-can-get-both-utilities-board-collect-big-money-115501796.jpg"},
+        "1": {"id": 21, "name": "Water Works", "price": 150, "image": "https://i.pinimg.com/564x/3f/62/34/3f6234128dec34716f0ac54b300c11fd.jpg"},
         "color": "white"
     },
     "5": {
@@ -66,6 +66,6 @@
         "properties": 2,
         "0": {"id": 27, "name": "Park Place", "price": 350},
         "1": {"id": 28, "name": "Boardwalk", "price": 400},
-        "color": "dodgerblue"
+        "color": "royalblue"
     }
 }

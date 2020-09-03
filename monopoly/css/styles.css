@@ -1,0 +1,37 @@
+* {
+    box-sizing: border-box;
+}
+
+.property {
+    display: inline-flex;
+    flex-flow: column wrap;
+    width: 120px;
+    height: 160px;
+    margin: 2px;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 0.7rem;
+    border: 1px solid;
+}
+
+.property .color {
+    height: 20%;
+    border-bottom: 1px solid;
+}
+
+.property .name {
+    margin: 0.5rem 0.5rem 0 0.5rem;
+}
+
+.property .image {
+    width: 30%;
+    margin: auto;
+}
+.property .image img {
+    width: 100%;
+}
+
+.property .price {
+    font-size: 0.8rem;
+    font-weight: bold;
+}
