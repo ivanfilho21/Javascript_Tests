@@ -7,15 +7,38 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h2>My Calculator</h2>
+    <div class="lp_container a">
+        <input type="text" name="player_a" value="Player A">
+        <h3 class="result">8000</h3>
+        
+        <div class="options">
+            <button class="btn" data-operation="subtract">-</button>
+            <input type="text" name="value_a" value="0" autofocus onfocus="this.selectionStart = 0; this.selectionEnd = this.value.length;">
+            <button class="btn" data-operation="sum">+</button>
+        </div>
+    </div>
+
+    <div class="lp_container b">
+        <input type="text" name="player_b" value="Player B">
+        <h3 class="result">8000</h3>
+
+        <div class="options">
+            <button type="submit">-</button>
+            <input type="text" name="value_b" value="0" autofocus onfocus="this.selectionEnd = this.value.length;">
+            <button type="submit">+</button>
+        </div>
+    </div>
+
+
+    <!-- <h2>My Calculator</h2>
 
     <div class="result">
         <span class="key">Result:</span>
-        <span class="value">0</span>
+        <span class="result">0</span>
     </div>
 
     <form method="POST" onsubmit="return false;">
-        <input type="number" name="operator_a" step="0.5" autofocus value="0">
+        <input type="number" name="operator_a" step="0.5" value="0">
 
         <select name="operation">
             <option value="0">+</option>
@@ -27,7 +50,7 @@
         <input type="number" name="operator_b" step="0.5" value="0">
         <button type="submit" onclick="calc()">=</button>
         <button type="reset">CLR</button>
-    </form>
+    </form> -->
 
     <script src="calc.js" defer></script>
 </body>
