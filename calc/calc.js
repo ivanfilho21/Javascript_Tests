@@ -1,83 +1,43 @@
 var lpA = 8000;
 var lpB = 8000;
 
+document.querySelector('.lp_container.a .result').innerHTML = lpA;
+document.querySelector('.lp_container.b .result').innerHTML = lpB;
+
 window.onload = () => {
     let btnsA = document.querySelectorAll('.lp_container.a .btn');
     let btnsB = document.querySelectorAll('.lp_container.b .btn');
     console.log(btnsA);
 
     for (let btn of btnsA) {
-        btn.onclick = () => updateLifePointsA(btn);
+        btn.onclick = () => updateLifePoints(btn, true);
     }
 
     for (let btn of btnsB) {
-        // btn.onclick = () => lpB();
+        btn.onclick = () => updateLifePoints(btn, false);
     }
 }
 
-function updateLifePointsA(btn) {
+function updateLifePoints(btn, firstPlayer = false) {
+    let src = firstPlayer ? 'a' : 'b';
+    let lp = firstPlayer ? lpA : lpB;
     let op = btn.dataset ? btn.dataset.operation : (btn.hasAttribute('data-operation') ? btn.getAttribute('data-operation') : null);
-    let value = document.querySelector('input[name=value_a]');
-    let res = document.querySelector('.lp_container.a .result');
+    let value = document.querySelector(`input[name=value_${src}]`).value;
+    value = parseInt(value);
+    let res = document.querySelector(`.lp_container.${src} .result`);
 
     if (! op) return;
 
     switch (op) {
         case 'sum':
-            res.innerHTML = lpA + parseInt(value.value);
+            lp += value;
             break;
         case 'subtract':
-            res.innerHTML = lpA - parseInt(value.value);
+            lp -= value;
             break;
     }
+    res.innerHTML = lp;
+
+    lpA = firstPlayer ? lp : lpA;
+    lpB = firstPlayer ? lpB : lp;
 }
-/* 
-
-
-function test(parent) {
-    console.log(parent);
-    switch (parent) {
-        case 'lp_a':
-            console.log('A');
-            break;
-        case 'lp_b':
-            console.log('B');
-            break;
-    }
-    
-    let valueB = document.querySelector('input[name=value_b]').value;
-    let lpA = document.querySelector('input[name=lp_a]');
-    let lpB = document.querySelector('input[name=lp_b]');
-
-    alert('');
-    return false;
-}
-
-
-function calc() {
-    let opA = document.querySelector('input[name=operator_a]').value;
-    let opB = document.querySelector('input[name=operator_b]').value;
-    let operation = document.querySelector('select[name=operation]').selectedIndex;
-    let res = 0;
-
-    opA = opA ? parseFloat(opA) : 0;
-    opB = opB ? parseFloat(opB) : 0;
-
-    switch(operation) {
-        case 0:
-            res = opA + opB;
-            break;
-        case 1:
-            res = opA - opB;
-            break;
-        case 2:
-            res = opA * opB;
-            break;
-        case 3:
-            res = opB != 0 ? opA / opB : 'Cannot divide by Zero';
-            break;
-    }
-
-    console.log(res);
-    document.querySelector('.result .value').innerHTML = res;
-} */
