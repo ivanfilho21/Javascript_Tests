@@ -1,0 +1,20 @@
+.stack {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    width: 100px;
+    margin: 1rem 0;
+    padding: 2rem 0.5rem 0.5rem 0.5rem;
+    border-width: 10px;
+    border-style: ridge;
+    border-top: 0;
+}
+
+.stack .element {
+    width: 80px;
+    margin: 0.2rem 0;
+    padding: 0.5rem;
+    text-align: center;
+    border: 1px solid #aaa;
+    border-radius: 6px;
+}
