@@ -4,17 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Data Structures</title>
+    <script src="js/util.js" defer></script>
     <script src="js/linked_list.js" defer></script>
+    <script src="js/stack.js" defer></script>
     <link rel="stylesheet" href="css/list.css">
+    <link rel="stylesheet" href="css/stack.css">
 </head>
 <body>
+    <h1>Stack</h1>
+
+    <input type="text" name="stack_data" placeholder="Data" onfocus="selectAll.call(this)">
+    <button onclick="push()">Push</button>
+    <button onclick="pop()">Pop</button>
+
+    <div class="stack"></div>
+
+    
     <h1>Linked List</h1>
 
-    <input type="text" name="data" placeholder="Data" onfocus="selectAll.call(this)" autofocus>
-    <button onclick="push()">Insert</button>
+    <input type="text" name="list_data" placeholder="Data" onfocus="selectAll.call(this)" autofocus>
+    <button onclick="insert()">Insert</button>
     <button onclick="remove()">Remove</button>
-    <button onclick="find()">Find</button>
-    <button onclick="replace()">Replace</button>
+    <button onclick="list_find()">Find</button>
+    <button onclick="list_replace()">Replace</button>
     <br>
     <br>
 
