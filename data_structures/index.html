@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Structures</title>
+    <script src="js/linked_list.js" defer></script>
+    <link rel="stylesheet" href="css/list.css">
+</head>
+<body>
+    <h1>Linked List</h1>
+
+    <input type="text" name="data" placeholder="Data" onfocus="selectAll.call(this)" autofocus>
+    <button onclick="push()">Insert</button>
+    <button onclick="remove()">Remove</button>
+    <button onclick="find()">Find</button>
+    <button onclick="replace()">Replace</button>
+    <br>
+    <br>
+
+    <div class="linked-list">
+        <div class="head">
+            <div class="next">Head</div>
+        </div>
+
+        <div class="link"></div>
+
+        <div class="null"></div>
+    </div>
+</body>
+</html>
