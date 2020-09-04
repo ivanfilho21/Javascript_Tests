@@ -1,53 +1,41 @@
 const linkedList = [];
+const data = document.querySelector('input[name=list_data]');
 var currentIndex = -1;
 
-function selectAll() {
-    this.selectionStart = 0;
-    this.selectionEnd = this.value.length;
-}
+function insert() {
+    let value = data.value;
+    if (! value) return;
 
-function push() {
-    let data = document.querySelector('input[name=data]').value;
-    if (! data) return;
-
-    linkedList.push(data);
-
+    linkedList.push(value);
     updateList();
 }
 
 function remove() {
-    let data = document.querySelector('input[name=data]').value;
-    if (! data) return;
+    let value = data.value;
+    if (! value) return;
 
-    for (d of linkedList) {
-        if (d == data) {
-            let i = linkedList.indexOf(data);
-            linkedList.splice(i, 1);
-        }
-    }
+    let i = linkedList.indexOf(value);
+    if (i == -1) return;
+
+    linkedList.splice(i, 1);
+    currentIndex = -1;
 
     updateList();
 }
 
-function find() {
-    let data = document.querySelector('input[name=data]').value;
-    if (! data) return;
+function list_find() {
+    let value = data.value;
+    if (! value) return;
 
-    for (d of linkedList) {
-        if (d == data) {
-            currentIndex = linkedList.indexOf(data);
-        }
-    }
-
-    console.log(currentIndex);
+    currentIndex = linkedList.indexOf(value);
 }
 
-function replace() {
-    let data = document.querySelector('input[name=data]').value;
-    if (! data) return;
+function list_replace() {
+    let value = data.value;
+    if (! value) return;
     if (currentIndex < 0) return;
 
-    linkedList[currentIndex] = data;
+    linkedList[currentIndex] = value;
     currentIndex = -1;
 
     updateList();
@@ -57,7 +45,7 @@ function updateList() {
     let list = document.querySelector('.linked-list');
     let content = '<div class="head"><div class="next">Head</div></div>';
 
-    for (data of linkedList) {
+    for (let data of linkedList) {
         content += `
             <div class="link"></div>
             <div class="node">
